@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app'
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -74,27 +74,27 @@ WSGI_APPLICATION = 'pepsico.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
-#         'default': {
-#             'ENGINE': 'mssql',
-#             'NAME': 'django',
-#             'USER': 'ntorres',
-#             'PASSWORD': 'nt123',
-#             'HOST': 'DESKTOP-M2MP01I',
-#             'PORT': '',
-
-#             'OPTIONS': {
-#                 'driver': 'ODBC Driver 17 for SQL Server',
-#             },
-#         },
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
+# }
+
+DATABASES = {
+        'default': {
+            'ENGINE': 'mssql',
+            'NAME': 'django',
+            'USER': 'ntorres',
+            'PASSWORD': 'nt123',
+            'HOST': 'DESKTOP-M2MP01I',
+            'PORT': '',
+
+            'OPTIONS': {
+                'driver': 'ODBC Driver 17 for SQL Server',
+            },
+        },
+    }
 
 
 # Password validation

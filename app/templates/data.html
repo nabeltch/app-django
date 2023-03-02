@@ -1,16 +1,21 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <!-- <meta http-equiv="refresh" content="3">  -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pepsico</title>
+    <title>Machine</title>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap-icons/bootstrap-icons.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 </head>
+<style>
+  .container{
+    margin-top: 150px;
+  }
+</style>
 <body>
     <!-- ======= Header ======= -->
 <header id="header" class="fixed-top d-flex align-items-center">
@@ -97,11 +102,46 @@
 
     </div>
   </header><!-- End Header -->
+ 
+
   <div class="container">
-    <h1>{{file}}</h1>
-    <h1>{{file1}}</h1>
+    <h4>PACK 03</h4>
+    <div class="row">
+      <div class="col-lg-12 turn1 py-2">
+        <h3>Turno 1 - 6:00 a 18:00</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Hora</th>
+              <th scope="col">Eficiencia</th>
+              <th scope="col">Total bags</th>
+              <th scope="col">Total teorico</th>
+            </tr>
+
+          </thead>
+          <tbody id="turn">
+
+
+          </tbody>
+
+        </table>
+        <div class="feeback" id="feeback">
+
+        </div>
+    </div>
   </div>
 
-    <script src="{% static 'js/index.js' %}"></script>
+  <div class="container">
+    <div id="list">
+
+    </div>
+
+  </div>
+
+
+
+
+    <script src="{% static 'js/ajax.js' %}"></script>
 </body>
 </html>
